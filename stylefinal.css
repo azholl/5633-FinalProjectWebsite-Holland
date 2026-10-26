@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(#edf7f4, #f5f6f8);
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Nav */
+
+.site-header {
+  background: none;
+  border: none;
+  padding: 1rem 0 0.5rem;
+}
+
+.nav-center ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-center a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827;
+  position: relative;
+}
+
+.nav-center a:hover,
+.nav-center a:focus-visible,
+.nav-center a.active {
+  text-decoration: none;
+}
+
+/* Underline hover effect */
+.nav-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #4a8b6f;
+  transition: width 0.2s ease;
+}
+
+.nav-center a:hover::after,
+.nav-center a.active::after {
+  width: 100%;
+}
+
+.nav-center a:focus-visible::after {
+  width: 100%;
+}
+
+
+/* Main layout */
+main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+/* Home Intro Layout */
+.intro-section {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr;
+  min-height: 60vh;
+}
+
+.intro-image {
+  background-image: url("https://media.istockphoto.com/id/1050312428/photo/tulsa-oklahoma-usa-skyline.jpg?s=2048x2048&w=is&k=20&c=V7iH6K_vGFphR4CRc3bz3VhpzlDLJLMasCC9rtkYzvM=");
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.intro-content {
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-tagline {
+  font-size: 1.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3b7f5e;
+  line-height: 1.6;
+  margin: 0 0 0.4rem;
+}
+
+.intro-content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+
+.intro-lead {
+  color: #4b5563;
+  max-width: 35rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.8rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.button.solid {
+  background: #4a8b6f;
+  color: #f9fafb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button.ghost {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.button.solid:hover {
+  background: #3f7f65;
+}
+
+.button.ghost:hover {
+  background: #d1d5db;
+}
+
+/* Social icons row */
+.intro-social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.intro-social a {
+  text-decoration: none;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 1.2rem;
+  color: #4b5563;
+}
+
+/* Page header */
+.page-header {
+  max-width: 1100px;
+  margin: 0 auto 1.5rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.4rem;
+}
+
+.page-header p {
+  margin: 0;
+  color: #4b5563;
+}
+
+/* Resources page sections */
+.resources-page .section {
+  max-width: 1100px;
+  margin: 0 auto 1.2rem;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.resource-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+.resource-list li {
+  margin-bottom: 0.75rem;
+}
+
+.resource-list li::marker {
+  color: #4a8b6f;
+}
+
+.resource-list a {
+  color: #256f5a;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.resource-list a:hover,
+.resource-list a:focus-visible {
+  color: #1f5a48;
+  text-decoration-thickness: 2px;
+}
+
+/* Contact layout */
+.contact-layout {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+  gap: 1.5rem;
+}
+
+.contact-layout form,
+.contact-aside {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 1.2rem 1.3rem;
+  min-width: 0;
+}
+
+.contact-aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.contact-aside li {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.required {
+  color: #4a8b6f;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.55rem;
+  border: 1px solid #d1d5db;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #4a8b6f;
+  outline-offset: 1px;
+}
+
+.field-error {
+  min-height: 1rem;
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: #dc2626;
+}
+
+.field-hint {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.form-status {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+}
+
+/* Links (general) */
+a { 
+  color: #256f5a; 
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Highlight effect for form status messages */
+.highlight {
+  background-color: #e0f2ef;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .intro-section {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .intro-content h1 {
+    font-size: 2rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro-actions {
+    gap: 1rem;
+  }
+  
+  .intro-image {
+    min-height: 200px;
+  }
+  
+  .intro-content h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Keep the original home layout while allowing it to fill the page. */
+.home-main { padding: 0; }
+.nav-center ul { flex-wrap: wrap; padding: 0 1rem; }
+input, select, textarea { max-width: 100%; }
+a { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .nav-center ul { gap: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact & Request</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Mask Bloc Tulsa to request masks or tests, ask questions, or connect about community care.">
+  <link rel="stylesheet" href="stylefinal.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav-center" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="indexresources.html">Resources</a></li>
+        <li><a href="indexform.html" class="active" aria-current="page">Contact / Request</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="contact-page">
+    <header class="page-header">
+      <h1>Contact and Request Form</h1>
+      <p>
+        This form is a course-project demonstration. It does not send or save requests. For an actual request, use the Google Forms request link below or contact us directly. Please do not enter personal or medical information into this demonstration.
+      </p>
+    </header>
+
+    <section class="section contact-layout">
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name <span class="required">*</span></label>
+          <input id="name" aria-describedby="name-error" name="name" type="text" autocomplete="name" required minlength="2">
+          <p class="field-error" id="name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input id="email" aria-describedby="email-error" name="email" type="email" autocomplete="email" required>
+          <p class="field-error" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="request-type">What do you need? <span class="required">*</span></label>
+          <select id="request-type" aria-describedby="type-error" name="request-type" required>
+            <option value="">Please choose an option</option>
+            <option value="masks">Masks</option>
+            <option value="tests">Tests</option>
+            <option value="resources">Information / resources</option>
+            <option value="other">Other</option>
+          </select>
+          <p class="field-error" id="type-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" aria-describedby="message-error" name="message" rows="5" required></textarea>
+          <p class="field-error" id="message-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Approximate number of masks requested</label>
+          <input id="quantity" aria-describedby="quantity-error" name="quantity" type="number" min="1" max="200" inputmode="numeric">
+          <p class="field-error" id="quantity-error" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="button solid">Try demo form</button>
+        <button type="reset" class="button ghost">Clear form</button>
+
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+
+      <aside class="contact-aside" aria-label="Other ways to reach us">
+        <h2>Other ways to reach us</h2>
+        <ul>
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:maskbloctulsa@proton.me">maskbloctulsa@proton.me</a>
+          </li>
+          <li>
+            <strong>Instagram:</strong>
+            <a href="https://www.instagram.com/maskbloctulsa" target="_blank" rel="noopener noreferrer">
+              @maskbloctulsa
+            </a>
+          </li>
+          <li>
+            <strong>Request form:</strong>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScXCysRrsnteTTtbfDTLBjh3Wr30AvzwsKqWALZVfNWAk24ow/viewform" target="_blank" rel="noopener noreferrer">
+              Google Forms request link
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+  <script src="scriptfinal.js"></script>
+
+  <footer class="site-footer">
+  <p>Mask Bloc Tulsa 2025</p>
+</footer>
+</body>
+</html>
